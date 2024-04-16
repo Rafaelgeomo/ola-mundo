@@ -1,10 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Inicio from "./Componentes/Inicio";
-import SobreMim from "./Componentes/SobreMim";
+import Inicio from "./Paginas/Inicio";
+import SobreMim from "./Paginas/SobreMim";
+import Menu from "./Componentes/Menu";
 
-function App() {
+function AppRoutes() {
   return (
-    <BrowserRouter>    
+    <BrowserRouter>
+      <Menu/>
+
       <Routes> {/* O componente Routes é responsável por alternar entre diferentes rotas da nossa aplicação e recebe componentes Route como conteúdo */}
         <Route path="/" element={<Inicio/>}/>
         <Route path="/sobremim" element={<SobreMim/>}/>
@@ -15,5 +18,5 @@ function App() {
   )
 };
 
-export default App;
+export default AppRoutes;
 
